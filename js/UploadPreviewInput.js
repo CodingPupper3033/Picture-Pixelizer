@@ -9,4 +9,6 @@ function showPreviewImage() {
 
 function setWidthHeightScaleValues() {
     ElementWidthInputUpload.value = image.width;
+    ElementHeightInputUpload.value = image.height;
+    ElementScaleInputUpload.value = 100;
 }

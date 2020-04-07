@@ -13,11 +13,16 @@ ElementInputUpload.onchange = function() {
 imageFileReader.onloadend = function() {
     imageSRC = imageFileReader.result;
     image.src = imageSRC;
-    
+}
+
+image.onload = function() {
     // Show preview image
     showPreviewImage();
     
     // Set the values of the Width/Height/Scale input boxes
     setWidthHeightScaleValues();
+    
+    // Draw on canvas
+    drawImageOnCanvas();
 }
 
