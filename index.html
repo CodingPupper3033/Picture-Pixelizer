@@ -18,18 +18,19 @@
                 <center>
                     <h2> <u> Upload: </u> </h2>
                 </center>
-                <div class="input-group">
+                <form>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputUpload">
-                        <label class="custom-file-label" for="inputUpload">Choose image</label>
+                        <input type="file" accept="image/*" class="custom-file-input" id="inputUpload">
+                        <label for="inputUpload" class="custom-file-label"> Choose Image </label>
                     </div>
-                </div>
-                <img>
+                </form>
+                <img id="previewPictureUpload" class="col-12 row-4">
             </div>
         </div>
         
         
         <script src="js/settings.js"></script>
         <script src="js/UploadPreviewInput.js"></script>
+        <script src="js/updateImageData.js"></script>
     </body>
 </html>
