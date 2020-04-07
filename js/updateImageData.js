@@ -16,5 +16,8 @@ imageFileReader.onloadend = function() {
     
     // Show preview image
     showPreviewImage();
+    
+    // Set the values of the Width/Height/Scale input boxes
+    setWidthHeightScaleValues();
 }
 

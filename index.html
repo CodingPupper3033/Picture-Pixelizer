@@ -19,7 +19,7 @@
             </center>
             <form>
                 <div class="custom-file">
-                    <input type="file" accept="image/*" class="custom-file-input" id="inputUpload">
+                    <input type="file" accept="image/png, image/jpeg" class="custom-file-input" id="inputUpload">
                     <label for="inputUpload" class="custom-file-label"> Choose Image </label>
                 </div>
             </form>
@@ -40,19 +40,19 @@
                         <center>
                             <h4> Width:</h4>
                         </center>
-                        <input type="number" id="widthInputUpload" class="input-group-number col-12">
+                        <input type="number" id="widthInputUpload" class="input-group-number col-12" min="1">
                     </div>
                     <div class="container col-4 border border-secondary rounded">
                         <center>
                             <h4> Height:</h4>
                         </center>
-                        <input id="heightInputUpload" class="input-group-number col-12">
+                        <input id="heightInputUpload" class="input-group-number col-12" min="1">
                     </div>
                     <div class="container col-4 border border-secondary rounded">
                         <center>
                             <h4> Scale:</h4>
                         </center>
-                        <input id="scaleInputUpload" class="input-group-number col-12">
+                        <input id="scaleInputUpload" class="input-group-number col-12" min="0">
                     </div>
                 </div>
             </form>
