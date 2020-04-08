@@ -16,9 +16,16 @@ ElementInputUpload.onchange = function() {
 
 imageFileReader.onloadend = function() {
     imageSRC = imageFileReader.result;
-    image.src = imageSRC;
-    imageOriginalHeight = image.height;
-    imageOriginalWidth = image.width;
+    var imageTemp = new Image();
+    imageTemp.src = imageSRC;
+    
+    imageTemp.onload = function() {
+        image.src = imageSRC;
+        image.width = imageTemp.width;
+        image.height = imageTemp.height;
+        imageOriginalHeight = image.height;
+        imageOriginalWidth = image.width;
+    }
 }
 
 image.onload = function() {

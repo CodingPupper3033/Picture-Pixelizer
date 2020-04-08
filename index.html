@@ -46,13 +46,13 @@
                         <center>
                             <h4> Height:</h4>
                         </center>
-                        <input id="heightInputEdit" class="input-group-number col-12" min="1">
+                        <input type="number" id="heightInputEdit" class="input-group-number col-12" min="1">
                     </div>
                     <div class="container col-4 border border-secondary rounded">
                         <center>
                             <h4> Scale:</h4>
                         </center>
-                        <input id="scaleInputEdit" class="input-group-number col-12" min="0">
+                        <input type="number" id="scaleInputEdit" class="input-group-number col-12" min="0">
                     </div>
                 </div>
             </form>
@@ -61,7 +61,9 @@
                 <img id="previewPictureEdit" style="image-rendering: pixelated; width: 100%;">
             </center>
             </div>
+            <button class="btn btn-secondary col-12"> Convert! </button>
         </div>
+        <br>
         
         <! Result>
         <div class="container border border-secondary rounded">
@@ -75,7 +77,7 @@
         <canvas id="imageCanvas"></canvas>
         
         <script src="js/settings.js"></script>
-        <!script src="js/zoom.js"><!/script>
+        <script src="js/zoom.js"></script>
         <script src="js/UploadPreviewInput.js"></script>
         <script src="js/imageProcessing.js"></script>
         <script src="js/EditPreview.js"></script>

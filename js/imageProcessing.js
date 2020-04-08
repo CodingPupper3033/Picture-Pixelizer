@@ -9,6 +9,17 @@ ElementWidthInputEdit.onchange = function() {
     showPreviewImageEdit();
 }
 
+ElementHeightInputEdit.onchange = function() {
+    setValuesHeight();
+    
+    image.width = ElementWidthInputEdit.value;
+    image.height = ElementHeightInputEdit.value;
+    
+    drawImageOnCanvas();
+    
+    showPreviewImageEdit();
+}
+
 
 function drawImageOnCanvas() {
     ElementImageCanvas.width    = image.width;

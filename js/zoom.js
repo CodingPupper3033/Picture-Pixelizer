@@ -93,6 +93,10 @@ function draw() {
     ctx.fillStyle="green";
     ctx.beginPath();
     ctx.arc(widthView/2+xleftView,heightView/2+ytopView,0.05,0,360,false);
+    
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(image,0,0, 1,1);
+    
     ctx.fill();
 }
 
