@@ -3,12 +3,12 @@
     ElementInputUpload.nextElementSibling.innerHTML = nameImage;
 }
 
-function showPreviewImage() {
+function showPreviewImageUpload() {
     ElementPreviewPictureUpload.src = imageSRC;
 }
 
 function setWidthHeightScaleValues() {
-    ElementWidthInputUpload.value = image.width;
-    ElementHeightInputUpload.value = image.height;
-    ElementScaleInputUpload.value = 100;
+    ElementWidthInputEdit.value = image.width;
+    ElementHeightInputEdit.value = image.height;
+    ElementScaleInputEdit.value = 100;
 }

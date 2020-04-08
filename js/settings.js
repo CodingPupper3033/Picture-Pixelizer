@@ -4,9 +4,10 @@
     var IDPreviewPictureUpload      = "previewPictureUpload";
     
     // Edit
-    var IDWidthInputUpload          = "widthInputUpload";
-    var IDHeightInputUpload         = "heightInputUpload";
-    var IDScaleInputUpload          = "scaleInputUpload";
+    var IDWidthInputEdit            = "widthInputEdit";
+    var IDHeightInputEdit           = "heightInputEdit";
+    var IDScaleInputEdit            = "scaleInputEdit";
+    var IDPreviewPictureEdit        = "previewPictureEdit";
 
     // Resize Canvas
     var IDImageCanvas        = "imageCanvas";
@@ -17,9 +18,10 @@
     var ElementPreviewPictureUpload = document.getElementById(IDPreviewPictureUpload);
 
     // Edit
-    var ElementWidthInputUpload     = document.getElementById(IDWidthInputUpload);
-    var ElementHeightInputUpload    = document.getElementById(IDHeightInputUpload);
-    var ElementScaleInputUpload     = document.getElementById(IDScaleInputUpload);
+    var ElementWidthInputEdit       = document.getElementById(IDWidthInputEdit);
+    var ElementHeightInputEdit      = document.getElementById(IDHeightInputEdit);
+    var ElementScaleInputEdit       = document.getElementById(IDScaleInputEdit);
+    var ElementPreviewPictureEdit   = document.getElementById(IDPreviewPictureEdit);
 
     // Resize Canvas
     var ElementImageCanvas   = document.getElementById(IDImageCanvas);
@@ -34,3 +36,5 @@
     var imageFileReader         = new FileReader();
     var imageSRC                ="";
     var image                   = new Image();
+    var imageOriginalWidth      = 0;
+    var imageOriginalHeight     = 0;

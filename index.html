@@ -23,7 +23,7 @@
                     <label for="inputUpload" class="custom-file-label"> Choose Image </label>
                 </div>
             </form>
-            <img id="previewPictureUpload" class="col-12">
+            <img id="previewPictureUpload" style="width: 100%;">
         </div>
         
         <br>
@@ -40,30 +40,45 @@
                         <center>
                             <h4> Width:</h4>
                         </center>
-                        <input type="number" id="widthInputUpload" class="input-group-number col-12" min="1">
+                        <input type="number" id="widthInputEdit" class="input-group-number col-12" min="1">
                     </div>
                     <div class="container col-4 border border-secondary rounded">
                         <center>
                             <h4> Height:</h4>
                         </center>
-                        <input id="heightInputUpload" class="input-group-number col-12" min="1">
+                        <input id="heightInputEdit" class="input-group-number col-12" min="1">
                     </div>
                     <div class="container col-4 border border-secondary rounded">
                         <center>
                             <h4> Scale:</h4>
                         </center>
-                        <input id="scaleInputUpload" class="input-group-number col-12" min="0">
+                        <input id="scaleInputEdit" class="input-group-number col-12" min="0">
                     </div>
                 </div>
             </form>
+            <div class="container">
+            <center>
+                <img id="previewPictureEdit" style="image-rendering: pixelated; width: 100%;">
+            </center>
+            </div>
         </div>
         
-        <! Canvas for small picture>
-        <canvas id="imageCanvas" style="display: none;"></canvas>
+        <! Result>
+        <div class="container border border-secondary rounded">
+            <center>
+                <h2> <u> Result: </u> </h2>
+            </center>
+            <canvas id="canvasResult" style="width: 100%;"></canvas>
+        </div>
+        
+        <! Canvas for correct size picture>
+        <canvas id="imageCanvas"></canvas>
         
         <script src="js/settings.js"></script>
+        <!script src="js/zoom.js"><!/script>
         <script src="js/UploadPreviewInput.js"></script>
         <script src="js/imageProcessing.js"></script>
+        <script src="js/EditPreview.js"></script>
         <script src="js/updateImageData.js"></script>
         
     </body>
