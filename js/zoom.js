@@ -85,11 +85,7 @@ function draw() {
     ctx.translate(-xleftView,-ytopView);
 
     ctx.fillStyle = "gray";
-    ctx.fillRect(xleftView,ytopView, widthView,heightView);
-    ctx.fillStyle = "blue";
-    ctx.fillRect(0.1,0.5,0.1,0.1);
-    ctx.fillStyle = "red";
-    ctx.fillRect(0.3,0.2,0.4,0.2);
+    ctx.fillRect(xleftView,ytopView, widthView,canvas.width*imageOriginalHeight/imageOriginalWidth);
 
     ctx.imageSmoothingEnabled = false;
     

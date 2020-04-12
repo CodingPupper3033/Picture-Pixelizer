@@ -70,7 +70,7 @@ function processImage() {
         } else {
             var percentDone = Math.round((amountPixelsDone*10000)/(image.width*image.height))/100;
             console.log(percentDone + "%");
-            ElementProgressBar.style.width = percentDone + "%";
+            ElementProgressBar.style.width = Math.round(10*percentDone)/10 + "%";
             ElementProgressBar.innerHTML = percentDone + "%";
         }
     }
@@ -82,5 +82,5 @@ function startProcessing() {
     countX = 0;
     countY = 0;
     canvas.height = canvas.width*imageOriginalHeight/imageOriginalWidth;
-    setInterval(processImage, 10);
+    setInterval(processImage, 1);
 }
