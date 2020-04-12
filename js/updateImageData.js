@@ -40,5 +40,8 @@ image.onload = function() {
     
     // Draw preview for Edit
     showPreviewImageEdit();
+    
+    // Update the count for Conversion
+    resetCount();
 }
 

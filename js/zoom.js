@@ -65,7 +65,7 @@ window.addEventListener("load",setup,false);
 function setup() {
     canvas = document.getElementById("canvasResult");
     ctx = canvas.getContext("2d");
-
+    
     widthCanvas = canvas.width;
     heightCanvas = canvas.height;
 
@@ -84,18 +84,20 @@ function draw() {
     ctx.scale(widthCanvas/widthView, heightCanvas/heightView);
     ctx.translate(-xleftView,-ytopView);
 
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "gray";
     ctx.fillRect(xleftView,ytopView, widthView,heightView);
     ctx.fillStyle = "blue";
     ctx.fillRect(0.1,0.5,0.1,0.1);
     ctx.fillStyle = "red";
     ctx.fillRect(0.3,0.2,0.4,0.2);
-    ctx.fillStyle="green";
-    ctx.beginPath();
-    ctx.arc(widthView/2+xleftView,heightView/2+ytopView,0.05,0,360,false);
-    
+
     ctx.imageSmoothingEnabled = false;
-    ctx.drawImage(image,0,0, 1,1);
+    
+
+    var testImage = new Image();
+    testImage.src = ElementPreviewPictureEdit.src;
+
+    ctx.drawImage(testImage,0,0,1,Math.round(imageOriginalHeight*100/imageOriginalWidth)*widthCanvas/(100*heightCanvas));
     
     ctx.fill();
 }

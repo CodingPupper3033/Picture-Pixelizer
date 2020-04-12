@@ -2,13 +2,19 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title> Picture Pixelizer </title>
+        <link rel="icon" href="imgs/icon.png">
     </head>
-    <body>
+    <body>   
         <div class="jumbotron bg-dark rounded-bottom">
             <center>
-                <h1 class="text-light"> Picture Pixelizer </h1>
-                <h3 class="text-light"> <i> Pixelize </i> your image! </h3>
-                <h4 class="text-light"> By: Joshua Miller </h4>
+            <div class="col-2">
+                <img src="imgs/icon.png" class="col-12">
+            </div>
+            <div class="col-12">
+                    <h1 class="text-light"> Picture Pixelizer </h1>
+                    <h3 class="text-light"> <i> Pixelize </i> your image! </h3>
+                    <h4 class="text-light"> By: Joshua Miller   </h4>
+            </div>
             </center>
         </div>
         
@@ -61,10 +67,15 @@
                 <img id="previewPictureEdit" style="image-rendering: pixelated; width: 100%;">
             </center>
             </div>
-            <button class="btn btn-secondary col-12"> Convert! </button>
         </div>
         <br>
         
+        <div class="container">
+            <button class="btn btn-secondary col-12"> <h3> Convert! </h3> </button>
+        </div>
+        
+        <br>
+        <br>
         <! Result>
         <div class="container border border-secondary rounded">
             <center>
@@ -74,7 +85,56 @@
         </div>
         
         <! Canvas for correct size picture>
-        <canvas id="imageCanvas"></canvas>
+        <canvas id="imageCanvas" style="image-rendering: pixelated; display: none;"></canvas>
+        
+        <br>
+        
+        <footer class="page-footer font-small bg-primary text-white rounded-top col-12">
+            <div style="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <h3> Author: </h3>
+                        <ul>
+                            <li> Made by: Joshua Miller</li>
+                            <li> Made in freetime </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3> Media: </h3>
+                        <ul>
+                            <li>
+                                <h5> None </h5>
+                                <ul style="list-style: circle;">
+                                    <li>
+                                        So far I have none. If needed I may make and attach some here. Very overated in my opinion.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3> Thanks: </h3>
+                        <ul>
+                            <li>
+                                <h5>
+                                    <a href="https://www.cs.colostate.edu/~anderson/newsite/javascript-zoom.html" class="text-success" target="_blank">
+                                        Zoom.js
+                                    </a>
+                                </h5>
+                                <ul style="list-style: circle;">
+                                    <li>
+                                        An amazing tool that allowed me to scroll in and out on the results!
+                                    </li>
+                                    <li>
+                                        Made by Chuck Anderson and posted on September 1, 2012.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
         
         <script src="js/settings.js"></script>
         <script src="js/zoom.js"></script>
@@ -82,6 +142,5 @@
         <script src="js/imageProcessing.js"></script>
         <script src="js/EditPreview.js"></script>
         <script src="js/updateImageData.js"></script>
-        
     </body>
 </html>

@@ -1,3 +1,6 @@
+var countX = 0;
+var countY = 0;
+
 ElementWidthInputEdit.onchange = function() {
     setValuesWidth();
     
@@ -36,4 +39,9 @@ function drawImageOnCanvas() {
     ElementImageCanvas.width    = image.width;
     ElementImageCanvas.height   = image.height;
     ContextResizedImageCanvas.drawImage(image,0,0,image.width,image.height);
+}
+
+function resetCount() {
+    countX = 0;
+    countY = 0;
 }
