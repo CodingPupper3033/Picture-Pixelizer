@@ -10,7 +10,10 @@
     var IDPreviewPictureEdit        = "previewPictureEdit";
 
     // Resize Canvas
-    var IDImageCanvas        = "imageCanvas";
+    var IDImageCanvas               = "imageCanvas";
+    
+    // Processing
+    var IDProgressBar               = "progressBar";
 
 // Elements
     // Upload
@@ -24,7 +27,10 @@
     var ElementPreviewPictureEdit   = document.getElementById(IDPreviewPictureEdit);
 
     // Resize Canvas
-    var ElementImageCanvas   = document.getElementById(IDImageCanvas);
+    var ElementImageCanvas          = document.getElementById(IDImageCanvas);
+
+    // Processing
+    var ElementProgressBar          = document.getElementById(IDProgressBar);
 
 // Canvas Contexts
     // Resize Canvas
@@ -38,3 +44,6 @@
     var image                   = new Image();
     var imageOriginalWidth      = 0;
     var imageOriginalHeight     = 0;
+
+// Processing
+    var processingImage         = false;

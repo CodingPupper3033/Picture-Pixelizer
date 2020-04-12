@@ -45,3 +45,42 @@ function resetCount() {
     countX = 0;
     countY = 0;
 }
+
+function processStep() {
+    if (countY < image.height) {
+        if (countX < image.width) {
+            countX++;
+            return countY*image.width + countX;
+        } else {
+            countY++;
+            countX = 0;
+            return countY*image.width;
+        }
+        
+    } else {
+        return true;
+    }
+}
+
+function processImage() {
+    if (processingImage) {
+        var amountPixelsDone = processStep();
+        if (countY >= image.height) {
+            processingImage = false;
+        } else {
+            var percentDone = Math.round((amountPixelsDone*10000)/(image.width*image.height))/100;
+            console.log(percentDone + "%");
+            ElementProgressBar.style.width = percentDone + "%";
+            ElementProgressBar.innerHTML = percentDone + "%";
+        }
+    }
+}
+
+function startProcessing() {
+    console.log("Starting conversion")
+    processingImage = true;
+    countX = 0;
+    countY = 0;
+    canvas.height = canvas.width*imageOriginalHeight/imageOriginalWidth;
+    setInterval(processImage, 10);
+}

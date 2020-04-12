@@ -11,7 +11,6 @@
             <div class="col-12">
                     <h1 class="text-light"> Picture Pixelizer </h1>
                     <h3 class="text-light"> <i> Pixelize </i> your image! </h3>
-                    <h4 class="text-light"> By: Joshua Miller   </h4>
             </div>
             </center>
         </div>
@@ -69,11 +68,14 @@
         <br>
         
         <div class="container">
-            <button class="btn btn-secondary col-12"> <h3> Convert! </h3> </button>
+            <button class="btn btn-secondary col-12" onclick="startProcessing()"> <h3> Convert! </h3> </button>
+            <div class="progress">
+                <div class="bg-primary text-white" style="width: 0%;" id="progressBar"> 0% </div>
+            </div>
         </div>
         
         <br>
-        <br>
+
         <! Result>
         <div class="container border border-secondary rounded">
             <center>
@@ -93,8 +95,22 @@
                     <div class="col-4">
                         <h3> Author: </h3>
                         <ul>
-                            <li> Made by: Joshua Miller</li>
-                            <li> Made in freetime </li>
+                            <li>
+                                <h5>
+                                    Joshua Miller
+                                </h5>
+                                <ul style="list-style: circle;">
+                                    <li>
+                                        Made in his free time.
+                                    </li>
+                                    <li>
+                                        Made in Early 2020.
+                                    </li>
+                                    <li>
+                                        Made by a 10<sup>th</sup> grader at <a href="https://www.xbhs.com/" class="text-success" target="_blank"> Xaverian Brothers High School </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-4">
