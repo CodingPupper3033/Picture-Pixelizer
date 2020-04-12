@@ -49,6 +49,9 @@ function resetCount() {
 function processStep() {
     if (countY < image.height) {
         if (countX < image.width) {
+            
+            
+            
             countX++;
             return countY*image.width + countX;
         } else {
@@ -82,5 +85,6 @@ function startProcessing() {
     countX = 0;
     countY = 0;
     canvas.height = canvas.width*imageOriginalHeight/imageOriginalWidth;
+    output = [];
     setInterval(processImage, 1);
 }

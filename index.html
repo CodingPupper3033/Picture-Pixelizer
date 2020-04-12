@@ -67,7 +67,20 @@
         </div>
         <br>
         
-        <div class="container">
+        <!Format>
+        <div class="container border border-secondary rounded">
+            <center>
+                <h2> <u> Format: </u> </h2>
+            </center>
+            
+            <form>
+                <div class="radio">
+                    <input type="radio" name="format" checked> <label> Minecraft</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="format" checked> <label> Lego</label>
+                </div>
+            </form>
             <button class="btn btn-secondary col-12" onclick="startProcessing()"> <h3> Convert! </h3> </button>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped text-white" style="width: 0%;" id="progressBar" role="progressbar">0%</div>
@@ -150,6 +163,7 @@
             </div>
         </footer>
         
+        <script src="js/values.js"></script>
         <script src="js/settings.js"></script>
         <script src="js/zoom.js"></script>
         <script src="js/UploadPreviewInput.js"></script>

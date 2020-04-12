@@ -84,7 +84,7 @@ function draw() {
     ctx.scale(widthCanvas/widthView, heightCanvas/heightView);
     ctx.translate(-xleftView,-ytopView);
 
-    ctx.fillStyle = "gray";
+    ctx.fillStyle = "white";
     ctx.fillRect(xleftView,ytopView, widthView,canvas.width*imageOriginalHeight/imageOriginalWidth);
 
     ctx.imageSmoothingEnabled = false;

@@ -47,3 +47,4 @@
 
 // Processing
     var processingImage         = false;
+    var output                  = [];
