@@ -9,11 +9,15 @@
     var IDScaleInputEdit            = "scaleInputEdit";
     var IDPreviewPictureEdit        = "previewPictureEdit";
 
+    // Format
+    var IDMinecraftCheck            = "minecraftCheck";
+
     // Resize Canvas
     var IDImageCanvas               = "imageCanvas";
     
     // Processing
     var IDProgressBar               = "progressBar";
+    var IDOutputCanvas              = "outputCanvas";
 
 // Elements
     // Upload
@@ -25,6 +29,9 @@
     var ElementHeightInputEdit      = document.getElementById(IDHeightInputEdit);
     var ElementScaleInputEdit       = document.getElementById(IDScaleInputEdit);
     var ElementPreviewPictureEdit   = document.getElementById(IDPreviewPictureEdit);
+
+    // Format
+    var ElementMinecraftCheck       = document.getElementById(IDMinecraftCheck);
 
     // Resize Canvas
     var ElementImageCanvas          = document.getElementById(IDImageCanvas);
@@ -47,4 +54,8 @@
 
 // Processing
     var processingImage         = false;
+    var ElementOutputCanvas     = document.getElementById(IDOutputCanvas);
     var output                  = [];
+
+// Format
+    var selectedRadio           = "minecraft";

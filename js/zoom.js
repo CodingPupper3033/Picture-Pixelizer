@@ -90,10 +90,10 @@ function draw() {
     ctx.imageSmoothingEnabled = false;
     
 
-    var testImage = new Image();
-    testImage.src = ElementPreviewPictureEdit.src;
+    var imageDraw = new Image();
+    imageDraw.src = ElementOutputCanvas.toDataURL();
 
-    ctx.drawImage(testImage,0,0,1,Math.round(imageOriginalHeight*100/imageOriginalWidth)*widthCanvas/(100*heightCanvas));
+    ctx.drawImage(imageDraw,0,0,1,Math.round(imageOriginalHeight*100/imageOriginalWidth)*widthCanvas/(100*heightCanvas));
     
     ctx.fill();
 }

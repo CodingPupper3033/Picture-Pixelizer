@@ -50,7 +50,22 @@ function processStep() {
     if (countY < image.height) {
         if (countX < image.width) {
             
+            // Get color
+            var imageDataCurrent = ContextResizedImageCanvas.getImageData(countX,countY,1,1);
+            var currentColor = [imageDataCurrent.data[0],imageDataCurrent.data[1],imageDataCurrent.data[2]];
             
+            // Get closest color
+            var closestColor = [[0,0,0],"null"];
+            if (selectedRadio == "minecraft") {
+                closestColor = minecraft[getClosestColor(minecraft, currentColor)]
+            }
+            
+            // Put into output
+            //output[countY][countX] = closestColor;
+            ElementOutputCanvas.getContext('2d').fillStyle = 'rgb(' + closestColor[0][0] + ',' + closestColor[0][1] + ',' + closestColor[0][2] +')';
+            ElementOutputCanvas.getContext('2d').fillRect(countX,countY,1,1);
+            
+            console.log(closestColor);
             
             countX++;
             return countY*image.width + countX;
@@ -76,6 +91,7 @@ function processImage() {
             ElementProgressBar.style.width = Math.round(10*percentDone)/10 + "%";
             ElementProgressBar.innerHTML = percentDone + "%";
         }
+        draw();
     }
 }
 
@@ -86,5 +102,21 @@ function startProcessing() {
     countY = 0;
     canvas.height = canvas.width*imageOriginalHeight/imageOriginalWidth;
     output = [];
+    outputImage = new Image();
+    ElementOutputCanvas.width = ElementImageCanvas.width;
+    ElementOutputCanvas.height = ElementImageCanvas.height;
     setInterval(processImage, 1);
+}
+
+function getClosestColor(arrayColors, color) {
+    var minColorDistance = (Math.abs(arrayColors[0][0][0]-color[0])+Math.abs(arrayColors[0][0][1]-color[1])+Math.abs(arrayColors[0][0][2]-color[2]))/3;
+    var minColorPOS = 0;
+    for (colorSectionNumb in arrayColors) {
+        var colorDistance = (Math.abs(arrayColors[colorSectionNumb][0][0]-color[0])+Math.abs(arrayColors[colorSectionNumb][0][1]-color[1])+Math.abs(arrayColors[colorSectionNumb][0][2]-color[2]))/3;
+        if (colorDistance < minColorDistance) {
+            minColorPOS = colorSectionNumb;
+            minColorDistance = colorDistance;
+        }
+    }
+    return minColorPOS;
 }

@@ -75,10 +75,10 @@
             
             <form>
                 <div class="radio">
-                    <input type="radio" name="format" checked> <label> Minecraft</label>
+                    <input type="radio" name="format" id="minecraftCheck" checked> <label> Minecraft</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="format" checked> <label> Lego</label>
+                    <input type="radio" name="format" id="legoCheck"> <label> Lego</label>
                 </div>
             </form>
             <button class="btn btn-secondary col-12" onclick="startProcessing()"> <h3> Convert! </h3> </button>
@@ -99,6 +99,7 @@
         
         <! Canvas for correct size picture>
         <canvas id="imageCanvas" style="image-rendering: pixelated; display: none;"></canvas>
+        <canvas id="outputCanvas" style="image-rendering: pixelated; display: none;"></canvas>
         
         <br>
         
@@ -165,6 +166,7 @@
         
         <script src="js/values.js"></script>
         <script src="js/settings.js"></script>
+        <script src="js/FormatSelect.js"></script>
         <script src="js/zoom.js"></script>
         <script src="js/UploadPreviewInput.js"></script>
         <script src="js/imageProcessing.js"></script>
