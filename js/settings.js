@@ -55,7 +55,10 @@
 // Processing
     var processingImage         = false;
     var ElementOutputCanvas     = document.getElementById(IDOutputCanvas);
-    var output                  = [];
+    var output                  = [[]];
 
 // Format
     var selectedRadio           = "minecraft";
+
+// DEBUG
+    var debug                   = false;

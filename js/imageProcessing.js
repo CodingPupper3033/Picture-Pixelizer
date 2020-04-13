@@ -61,17 +61,20 @@ function processStep() {
             }
             
             // Put into output
-            //output[countY][countX] = closestColor;
+            output[countY][countX] = closestColor;
             ElementOutputCanvas.getContext('2d').fillStyle = 'rgb(' + closestColor[0][0] + ',' + closestColor[0][1] + ',' + closestColor[0][2] +')';
             ElementOutputCanvas.getContext('2d').fillRect(countX,countY,1,1);
             
-            console.log(closestColor);
+            if (debug) {
+                console.log(closestColor);
+            }
             
             countX++;
             return countY*image.width + countX;
         } else {
             countY++;
             countX = 0;
+            output[countY] = [];
             return countY*image.width;
         }
         
@@ -85,13 +88,26 @@ function processImage() {
         var amountPixelsDone = processStep();
         if (countY >= image.height) {
             processingImage = false;
+            draw();
+            
+            var testOutput = ""
+            
+            for (outputCol of output) {
+                for (outputRow of outputCol) {
+                    testOutput += (outputRow[2]-2) + " "
+                }
+            }
+            
+            console.log(testOutput);
+            
         } else {
             var percentDone = Math.round((amountPixelsDone*10000)/(image.width*image.height))/100;
-            console.log(percentDone + "%");
+            if (debug) {
+                console.log(percentDone + "%");
+            }
             ElementProgressBar.style.width = Math.round(10*percentDone)/10 + "%";
             ElementProgressBar.innerHTML = percentDone + "%";
         }
-        draw();
     }
 }
 
@@ -101,7 +117,7 @@ function startProcessing() {
     countX = 0;
     countY = 0;
     canvas.height = canvas.width*imageOriginalHeight/imageOriginalWidth;
-    output = [];
+    output = [[]];
     outputImage = new Image();
     ElementOutputCanvas.width = ElementImageCanvas.width;
     ElementOutputCanvas.height = ElementImageCanvas.height;
